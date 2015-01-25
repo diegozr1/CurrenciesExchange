@@ -1,11 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<meta charset="utf-8">
+<head>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<style type="text/css">
+	.main{
+		margin: 0px;
+		padding: 0px;
+		font-family: Arial;
+		font-size: 13px;
+		background: #ecf0f1;
+	}
+	.container{
+		width: 350px;
+		min-height: 150px;
+		max-height: 200px;
+	}
+	</style>	
+</head>
+<body class="main" ng-controller="Money">
+	<div class="container">
+		<nav class="navbar">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" >
+		        <p>
+		        <img alt="Brand" src="icon.png" width="10%">
+		        &nbsp;Tipo de cambio actual
+		        </p>
+		      </a>
+		    </div>
+		  </div>
+		</nav>	
+		<div class="input-group">
+	      <input type="text" ng-model="pesos"class="form-control" placeholder="Cantidad">
+	      <span class="input-group-btn">
+	        <button class="btn btn-default">Pesos</button>
+	      </span>
+	    </div><!-- /input-group -->
+		<br>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+		    $ {{ pesos || 0}} MXN <br>
+		    $ {{ pesos*dolar || 0 }} USD <br>
+		    $ {{ pesos*bitcoin || 0}} BTC
+		  </div>
+		</div>		
+	</div>
 
-<script>
-// Add your code below this line!
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.coinbase.com/v1/currencies/exchange_rates", false);
-xhr.send();
-// Add your code above this line!
-
-console.log(xhr.status);
-//console.log(xhr.statusText);
-</script>
+	<script src="js/angular.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/app.js"></script>	
+</body>
+</html>

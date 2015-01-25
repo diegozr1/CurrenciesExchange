@@ -1,8 +1,14 @@
 {
-  "name": "Realtime Currency!",
+  "name": "Tipo de cambio",
   "version": "1.0",
-  "description": "A extension to change in realtime money to your currency.",
+  "manifest_version": 2,
+  "permissions":[
+  	"https://api.coinbase.com/"
+  ],
+  "description": "Una extensión para saber el tipo de cambio en tiempo real",
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.png",
+    "default_popup":"index.html",
+    "default_title":"Currencies rate"
   }
 }
