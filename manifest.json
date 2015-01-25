@@ -1,0 +1,8 @@
+{
+  "name": "Realtime Currency!",
+  "version": "1.0",
+  "description": "A extension to change in realtime money to your currency.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
