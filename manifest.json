@@ -1,14 +1,14 @@
 {
-  "name": "Tipo de cambio",
+  "name": "Tipo de cambio en tiempo real",
   "version": "1.0",
   "manifest_version": 2,
   "permissions":[
   	"https://api.coinbase.com/"
   ],
-  "description": "Una extensión para saber el tipo de cambio en tiempo real",
+  "description": "Conozca cuantos pesos necesita para comprar en dólares americanos o bitcoins",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup":"index.html",
-    "default_title":"Currencies rate"
+    "default_title":"Tipo de cambio México"
   }
 }

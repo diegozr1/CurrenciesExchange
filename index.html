@@ -33,7 +33,10 @@
 		  </div>
 		</nav>	
 		<div class="input-group">
-	      <input type="text" ng-model="pesos"class="form-control" placeholder="Cantidad">
+		<span class="input-group-btn">
+	        <button class="btn btn-default">$</button>
+	      </span>
+	      <input type="text" ng-model="pesos"class="form-control" placeholder="Cantidad" autofocus>
 	      <span class="input-group-btn">
 	        <button class="btn btn-default">Pesos</button>
 	      </span>
@@ -41,11 +44,16 @@
 		<br>
 		<div class="panel panel-default">
 		  <div class="panel-body">
-		    $ {{ pesos || 0}} MXN <br>
-		    $ {{ pesos*dolar || 0 }} USD <br>
-		    $ {{ pesos*bitcoin || 0}} BTC
+		    $ {{ pesos || 0}} <b>MXN</b> <br>
+		    $ {{ pesos*dolar || 0 }} <b>USD</b> <br>
+		    $ {{ pesos*bitcoin || 0}} <b>BTC</b>
 		  </div>
-		</div>		
+		</div>
+		<div align="center">
+		<p class="small">Ayúdanos a seguir
+			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YVDHLG3GLEL4W" target="_blank" class="btn btn-warning btn-sm">Donar</a>
+		</p>	
+		</div>
 	</div>
 
 	<script src="js/angular.js"></script>
