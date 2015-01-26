@@ -1,4 +1,4 @@
-# Tipo de Cambio para México
+# Convertidor de divisa Peso/Dólar
 
 Extensión de Google Chrome perfecta para comercio electrónico y viajes.
 
