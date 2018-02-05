@@ -2,14 +2,16 @@
 <html ng-app="App">
 <meta charset="utf-8">
 <head>	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://bootswatch.com/3/cosmo/bootstrap.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<style type="text/css">
 	.main{
 		margin: 0px;
 		padding: 0px;
 		font-family: Arial;
 		font-size: 13px;
-		background: #ecf0f1;
+		/* background: #ecf0f1; */ 
 	}
 	.container{
 		width: 350px;
@@ -24,35 +26,64 @@
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <a class="navbar-brand" >
-		        <p>
+		        <p class="text-center">
 		        <img alt="Brand" src="icon.png" width="10%">
-		        &nbsp;Tipo de cambio actual
-		        </p>
+						Tipo de cambio {{cc}}						
+						</p>						
 		      </a>
 		    </div>
 		  </div>
 		</nav>	
 		<div class="input-group">
-		<span class="input-group-btn">
+				<span class="input-group-btn">
 	        <button class="btn btn-default">$</button>
 	      </span>
-	      <input type="text" ng-model="pesos"class="form-control" placeholder="Cantidad" autofocus>
+	      <input type="text" ng-model="amount"class="form-control" placeholder="Cantidad" autofocus>
 	      <span class="input-group-btn">
-	        <button class="btn btn-default">Pesos</button>
+					<button class="btn btn-default">MXN</button>
+					<!--<div class="form-group">
+							<label for="sel1">Select list:</label>
+							<select class="form-control" ng-model="cc">
+								<option ng-repeat="x in currencies">{{x}}</option>
+							</select>	
+						</div>-->
 	      </span>
 	    </div><!-- /input-group -->
 		<br>
-		<div class="panel panel-default">
-		  <div class="panel-body">
-		    $ {{ pesos || 0}} <b>MXN</b> <br>
-		    $ {{ pesos*dolar || 0 }} <b>USD</b> <br>
-		    $ {{ pesos*bitcoin || 0}} <b>BTC</b>
-		  </div>
+		<div class="row">
+			<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Forex
+						</div>
+						<div class="panel-body">							
+							$ {{ amount*USD || USDBASE + " MXN - " }} <b>USD</b> <br>
+							$ {{ amount*EUR || EURBASE + " MXN - " }} <b>EUR</b> <br>
+							$ {{ amount*CAD || CADBASE + " MXN - " }} <b>CAD</b> <br>
+							$ {{ amount*JPY || JPY + " MXN - " }} <b>JPY</b> <br>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							Criptocurrencies
+						</div>
+						<div class="panel-body">
+							{{ amount/BTC || "$"+BTC + " MXN - " }} <b>BTC</b> <br>
+							{{ amount/ETH || "$"+ETH + " MXN - " }} <b>ETH</b> <br>
+							{{ amount/XRP || "$"+XRP + " MXN - " }} <b>XRP</b> <br>
+							{{ amount/LTC || "$"+LTC + " MXN - " }} <b>LTC</b>
+						</div>
+					</div>
+			</div>
 		</div>
+		
 		<div align="center">
-		<p class="small">Ayúdanos a seguir
+		<p class="small">Ayúdanos a seguir 
 			<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YVDHLG3GLEL4W" target="_blank" class="btn btn-warning btn-sm">Donar</a>
-		</p>	
+		</p>
+		
 		</div>
 	</div>
 

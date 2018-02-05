@@ -1,9 +1,10 @@
 {
-  "name": "Convertidor de divisa Peso/Dólar",
+  "name": "Convertidor de divisas",
   "version": "1.0",
   "manifest_version": 2,
   "permissions":[
-  	"https://api.coinbase.com/"
+    "https://api.fixer.io/",
+    "https://api.bitso.com"
   ],
   "description": "Conozca cuantos pesos necesita para comprar en dólares americanos o bitcoins",
   "browser_action": {
